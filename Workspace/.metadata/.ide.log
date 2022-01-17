@@ -1,0 +1,32 @@
+2022-01-15 00:29:16,230 [INFO] Activator:177 - 
+
+
+2022-01-15 00:29:16,231 [INFO] Activator:178 - !SESSION log4j initialized
+2022-01-15 00:29:17,544 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2022-01-15 01:43:11,314 [INFO] Activator:177 - 
+
+
+2022-01-15 01:43:11,316 [INFO] Activator:178 - !SESSION log4j initialized
+2022-01-15 01:43:14,724 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2022-01-15 02:32:18,865 [INFO] Activator:177 - 
+
+
+2022-01-15 02:32:18,867 [INFO] Activator:178 - !SESSION log4j initialized
+2022-01-15 02:32:22,305 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2022-01-17 10:21:57,783 [INFO] Activator:177 - 
+
+
+2022-01-17 10:21:57,784 [INFO] Activator:178 - !SESSION log4j initialized
+2022-01-17 10:22:01,641 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2022-01-17 11:02:59,833 [INFO] Activator:177 - 
+
+
+2022-01-17 11:02:59,835 [INFO] Activator:178 - !SESSION log4j initialized
+2022-01-17 11:03:03,774 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2022-01-17 12:28:43,845 [INFO] Activator:177 - 
+
+
+2022-01-17 12:28:43,846 [INFO] Activator:178 - !SESSION log4j initialized
+2022-01-17 12:28:45,833 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
+2022-01-17 12:29:06,588 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {s}->https://sw-center.st.com:443: Socket closed
+2022-01-17 12:29:06,590 [INFO] RetryExec:113 - Retrying request to {s}->https://sw-center.st.com:443
