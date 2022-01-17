@@ -1,3 +1,0 @@
-animation.cpp:21:1:tkrandom::Animation::Animation(tkrandom::Transmitter&)	16	static
-animation.cpp:27:17:tkrandom::AnimationStatus tkrandom::Animation::ClockAnimation()	24	static
-animation.cpp:79:19:tkrandom::TransmitterStatus tkrandom::Animation::SwitchLeds(tkrandom::Led, tkrandom::Led) const	32	static
