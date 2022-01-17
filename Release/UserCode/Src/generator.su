@@ -1,0 +1,4 @@
+generator.cpp:20:1:tkrandom::Generator::Generator(RNG_HandleTypeDef*)	0	static
+generator.cpp:25:17:tkrandom::GeneratorStatus tkrandom::Generator::GetUniformRandomNumber(uint16_t*) const	24	static
+generator.cpp:40:17:tkrandom::GeneratorStatus tkrandom::Generator::GetNormalRandomNumber(uint16_t*) const	32	static
+generator.cpp:66:6:void tkrandom::Generator::ResetRng()	8	static

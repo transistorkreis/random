@@ -1,0 +1,3 @@
+pcb_status_led.cpp:20:1:tkrandom::PcbStatusLed::PcbStatusLed(GPIO_TypeDef*, uint16_t)	24	static
+pcb_status_led.cpp:31:6:void tkrandom::PcbStatusLed::SetLedMode(tkrandom::PcbStatusLedMode)	16	static
+pcb_status_led.cpp:38:6:void tkrandom::PcbStatusLed::ProcessTick()	16	static

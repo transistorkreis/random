@@ -1,0 +1,5 @@
+transmitter.cpp:20:1:tkrandom::Transmitter::Transmitter(SPI_HandleTypeDef*, GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t)	24	static
+transmitter.cpp:36:6:void tkrandom::Transmitter::Init()	16	static
+transmitter.cpp:49:19:tkrandom::TransmitterStatus tkrandom::Transmitter::SetVoltage(tkrandom::Output, uint16_t) const	24	static
+transmitter.cpp:55:19:tkrandom::TransmitterStatus tkrandom::Transmitter::SetLedBrightness(tkrandom::Led, uint16_t) const	40	static
+transmitter.cpp:68:19:tkrandom::TransmitterStatus tkrandom::Transmitter::TransmitValue(uint8_t, uint16_t) const	24	static

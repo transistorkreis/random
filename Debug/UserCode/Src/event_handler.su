@@ -1,0 +1,6 @@
+event_handler.cpp:21:1:tkrandom::EventHandler::EventHandler(tkrandom::PcbStatusLed&, tkrandom::RngHandler&, tkrandom::Animation&, tkrandom::DistributionPins&)	24	static
+event_handler.cpp:40:6:void tkrandom::EventHandler::Run()	24	static
+event_handler.cpp:78:6:void tkrandom::EventHandler::Init()	16	static
+event_handler.cpp:83:6:void tkrandom::EventHandler::ProcessDistribution()	40	static
+event_handler.cpp:124:6:void tkrandom::EventHandler::SignalEvent(tkrandom::Event)	16	static
+event_handler.cpp:146:6:void tkrandom::EventHandler::HandleError()	16	static
