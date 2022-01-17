@@ -1,3 +1,7 @@
+# STM32CubeIDE project files
+.mxproject
+.settings
+
 # Prerequisites
 *.d
 
