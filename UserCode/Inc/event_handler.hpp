@@ -1,14 +1,13 @@
-//  published under the MIT License
-//  [github.com/transistorkreis/Random]
+//! \brief     Class declaration for processing state machine events.
+//! \details   -
+//! \file      event_handler.hpp
+//! \author    André Niederlein
+//! \date      2020-07-29
+//! \copyright GNU General Public License v3:
+//! \copyright https://opensource.org/licenses/GPL-3.0
 //
-//  compliant to the Google C++ Style Guide
-//  [https://google.github.io/styleguide/cppguide.html]
-//
-//! \brief   class declaration for processing state machine events
-//! \details implemented as singleton
-//! \file    event_handler.hpp
-//! \author  transistorkreis
-//! \date    2020-07-29
+//  compliant to the Google C++ Style Guide:
+//  https://google.github.io/styleguide/cppguide.html
 
 #ifndef EVENT_HANDLER_HPP_
 #define EVENT_HANDLER_HPP_

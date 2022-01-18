@@ -1,14 +1,13 @@
-//  published under the MIT License
-//  [github.com/transistorkreis/Random]
+//! \brief     Class declaration for frontpanel LED animation.
+//! \details   Declaration of function members for LED switching patterns.
+//! \file      animation.hpp
+//! \author    André Niederlein
+//! \date      2020-07-29
+//! \copyright GNU General Public License v3:
+//! \copyright https://opensource.org/licenses/GPL-3.0
 //
-//  compliant to the Google C++ Style Guide
-//  [https://google.github.io/styleguide/cppguide.html]
-//
-//! \brief   class declaration for frontpanel LED animation
-//! \details declaration of function members for LED switching patterns
-//! \file    animation.hpp
-//! \author  transistorkreis
-//! \date    2020-07-29
+//  compliant to the Google C++ Style Guide:
+//  https://google.github.io/styleguide/cppguide.html
 
 #ifndef ANIMATION_HPP_
 #define ANIMATION_HPP_

@@ -1,14 +1,13 @@
-//  published under the MIT License
-//  [github.com/transistorkreis/tkrandom]
+//! \brief     Class definition for the random number buffers handling.
+//! \details   Handles number buffers with uniform and normal distribution.
+//! \file      rng_handler.cpp
+//! \author    André Niederlein
+//! \date      2021-01-07
+//! \copyright GNU General Public License v3:
+//! \copyright https://opensource.org/licenses/GPL-3.0
 //
-//  compliant to the Google C++ Style Guide
-//  [https://google.github.io/styleguide/cppguide.html]
-//
-//! \brief   class defintion for the random number buffers handling
-//! \details there are random numbers with uniform and normal distribution
-//! \file    rng_buffers.cpp
-//! \author  transistorkreis
-//! \date    2021-01-07
+//  compliant to the Google C++ Style Guide:
+//  https://google.github.io/styleguide/cppguide.html
 
 // INCLUDES --------------------------------------------------------------------
 #include "rng_handler.hpp"

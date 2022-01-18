@@ -1,14 +1,13 @@
-//  published under the MIT License
-//  [github.com/transistorkreis/Random]
+//! \brief     Class declaration for random number generation.
+//! \details   Generates 16-bit random numbers (uniform or normal distribution).
+//! \file      generator.hpp
+//! \author    André Niederlein
+//! \date      2021-01-05
+//! \copyright GNU General Public License v3:
+//! \copyright https://opensource.org/licenses/GPL-3.0
 //
-//  compliant to the Google C++ Style Guide
-//  [https://google.github.io/styleguide/cppguide.html]
-//
-//! \brief   class declaration for random number generation
-//! \details generates 16-bit random numbers (uniform and normal distribution)
-//! \file    generator.hpp
-//! \author  transistorkreis
-//! \date    2021-01-05
+//  compliant to the Google C++ Style Guide:
+//  https://google.github.io/styleguide/cppguide.html
 
 #ifndef GENERATOR_HPP_
 #define GENERATOR_HPP_

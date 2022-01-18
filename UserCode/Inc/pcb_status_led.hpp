@@ -1,14 +1,13 @@
-//  published under the MIT License
-//  [github.com/transistorkreis/Random]
+//! \brief     Class declaration for setting the operating mode of the PCB LED.
+//! \details   The PCB LED can be switched or blink with different frequencies.
+//! \file      pcb_status_led.hpp
+//! \author    André Niederlein
+//! \date      2020-07-29
+//! \copyright GNU General Public License v3:
+//! \copyright https://opensource.org/licenses/GPL-3.0
 //
-//  compliant to the Google C++ Style Guide
-//  [https://google.github.io/styleguide/cppguide.html]
-//
-//! \brief   class declaration for setting the operating mode of the PCB LED
-//! \details the PCB LED can be switched on or blink with different frequencies
-//! \file    pcb_status_led.hpp
-//! \author  transistorkreis
-//! \date    2020-07-29
+//  compliant to the Google C++ Style Guide:
+//  https://google.github.io/styleguide/cppguide.html
 
 #ifndef PCB_STATUS_LED_HPP_
 #define PCB_STATUS_LED_HPP_

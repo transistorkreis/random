@@ -1,14 +1,13 @@
-//  published under the MIT License
-//  [github.com/transistorkreis/Random]
+//! \brief     Class declaration for setting the outputs and LEDs via SPI.
+//! \details   There are 4 outputs and 1 LED for each output on the front panel.
+//! \file      transmitter.hpp
+//! \author    André Niederlein
+//! \date      2020-07-31
+//! \copyright GNU General Public License v3:
+//! \copyright https://opensource.org/licenses/GPL-3.0
 //
-//  compliant to the Google C++ Style Guide
-//  [https://google.github.io/styleguide/cppguide.html]
-//
-//! \brief   class declaration for setting front panel outputs and LEDs via SPI
-//! \details on the front panel there are 4 outputs and 1 LED for each output
-//! \file    transmitter.hpp
-//! \author  transistorkreis
-//! \date    2020-07-31
+//  compliant to the Google C++ Style Guide:
+//  https://google.github.io/styleguide/cppguide.html
 
 #ifndef TRANSMITTER_HPP_
 #define TRANSMITTER_HPP_

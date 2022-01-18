@@ -1,14 +1,13 @@
-//  published under the MIT License
-//  [github.com/transistorkreis/tkrandom]
+//! \brief     Class definition for frontpanel LED animation.
+//! \details   Definition of function members for LED switching patterns.
+//! \file      animation.cpp
+//! \author    André Niederlein
+//! \date      2020-07-29
+//! \copyright GNU General Public License v3:
+//! \copyright https://opensource.org/licenses/GPL-3.0
 //
-//  compliant to the Google C++ Style Guide
-//  [https://google.github.io/styleguide/cppguide.html]
-//
-//! \brief   class definition for frontpanel LED animation
-//! \details definition of function members for LED switching patterns
-//! \file    animation.cpp
-//! \author  transistorkreis
-//! \date    2020-07-29
+//  compliant to the Google C++ Style Guide:
+//  https://google.github.io/styleguide/cppguide.html
 
 // INCLUDES --------------------------------------------------------------------
 #include "animation.hpp"
