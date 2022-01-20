@@ -3,8 +3,7 @@
 //! \file      rng_handler.cpp
 //! \author    André Niederlein
 //! \date      2021-01-07
-//! \copyright GNU General Public License v3:
-//! \copyright https://opensource.org/licenses/GPL-3.0
+//! \copyright GNU General Public License v3, see ../LICENSE
 //
 //  compliant to the Google C++ Style Guide:
 //  https://google.github.io/styleguide/cppguide.html

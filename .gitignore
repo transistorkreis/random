@@ -1,6 +1,10 @@
 # STM32CubeIDE project files
 .mxproject
-.settings
+.settings/
+
+# Debug and Release folder
+Debug/
+Release/
 
 # Prerequisites
 *.d
