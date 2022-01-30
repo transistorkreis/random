@@ -1,6 +1,8 @@
 # STM32CubeIDE project files
 .mxproject
 .settings/
+"random Debug.launch"
+"random Release.launch"
 
 # Debug and Release folder
 Debug/
