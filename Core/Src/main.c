@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "event_handler.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,7 +46,8 @@ SPI_HandleTypeDef hspi1;
 TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN PV */
-
+//! event handler is global in order to be called by interrupt routines
+tkrandom::EventHandler* event_handler = nullptr;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -96,13 +97,49 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-
+  tkrandom::PcbStatusLed* const pcb_status_led =
+      new tkrandom::PcbStatusLed(GPIOB, GPIO_PIN_0);
+  tkrandom::Transmitter* const transmitter =
+      new tkrandom::Transmitter(&hspi1, GPIOA, GPIO_PIN_4, GPIOA, GPIO_PIN_6);
+  tkrandom::Generator* const generator =
+      new tkrandom::Generator(&hrng);
+  tkrandom::RngHandler* const rng_handler =
+      new tkrandom::RngHandler(*generator, *transmitter);
+  tkrandom::DistributionPins* const distribution_pins =
+      new tkrandom::DistributionPins();
+  if ((pcb_status_led == nullptr) ||
+      (generator == nullptr) ||
+      (rng_handler == nullptr) ||
+      (transmitter == nullptr) ||
+      (distribution_pins == nullptr)) {
+    return -1;
+  }
+  distribution_pins->gpio_port_distribution_1 = GPIOB;
+  distribution_pins->pin_distribution_1 = GPIO_PIN_4;
+  distribution_pins->gpio_port_distribution_2 = GPIOB;
+  distribution_pins->pin_distribution_2 = GPIO_PIN_5;
+  distribution_pins->gpio_port_distribution_3 = GPIOB;
+  distribution_pins->pin_distribution_3 = GPIO_PIN_6;
+  distribution_pins->gpio_port_distribution_4 = GPIOB;
+  distribution_pins->pin_distribution_4 = GPIO_PIN_7;
+  tkrandom::Animation* const animation = new tkrandom::Animation(*transmitter);
+  event_handler = new tkrandom::EventHandler(*pcb_status_led,
+                                             *rng_handler,
+                                             *animation,
+                                             *distribution_pins);
+  if ((event_handler != nullptr) && (animation != nullptr)) {
+    event_handler->Init();
+  }
+  else {
+    return -1;
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    event_handler->Run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -251,7 +288,10 @@ static void MX_TIM6_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM6_Init 2 */
-
+  HAL_TIM_GenerateEvent(&htim6, TIM_EVENTSOURCE_UPDATE);
+  HAL_NVIC_SetPriority(TIM6_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(TIM6_IRQn);
+  HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END TIM6_Init 2 */
 
 }
@@ -330,7 +370,28 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+  event_handler->SignalEvent(tkrandom::Event::kTimerElapsed);
+}
 
+void HAL_GPIO_EXTI_Callback(uint16_t gpio_pin) {
+  // EXTI line for IN_1
+  if (gpio_pin == GPIO_PIN_1) {
+    event_handler->SignalEvent(tkrandom::Event::kGate1Triggered);
+  }
+  // EXTI line for IN_2
+  if (gpio_pin == GPIO_PIN_10) {
+    event_handler->SignalEvent(tkrandom::Event::kGate2Triggered);
+  }
+  // EXTI lines for distribution switches (PB4, PB5, PB6, PB7)
+  // hint: only one collective EXTI line for pin 5, 6 and 7
+  if ((gpio_pin == GPIO_PIN_4) ||
+      (gpio_pin == GPIO_PIN_5) ||
+      (gpio_pin == GPIO_PIN_6) ||
+      (gpio_pin == GPIO_PIN_7)) {
+    event_handler->SignalEvent(tkrandom::Event::kDistributionChanged);
+  }
+}
 /* USER CODE END 4 */
 
 /**
@@ -341,10 +402,7 @@ void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+  event_handler->SignalEvent(tkrandom::Event::kErrorOccurred);
   /* USER CODE END Error_Handler_Debug */
 }
 
